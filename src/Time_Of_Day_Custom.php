@@ -8,7 +8,7 @@ class Time_Of_Day_Custom extends \Tribe__Events__Filterbar__Filter {
 
 	public $type = 'checkbox';
 
-	// THese are needed to make the join aliases unique
+	// These are needed to make the join aliases unique
 	protected $alias = '';
 	protected $tod_start_alias = '';
 	protected $tod_duration_alias = '';

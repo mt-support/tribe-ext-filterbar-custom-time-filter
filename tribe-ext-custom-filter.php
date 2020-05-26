@@ -225,7 +225,7 @@ if (
 
 		  include_once __DIR__ . '/src/Time_Of_Day_Custom.php';
 
-		  $map['timeofdaycustom'] = 'Time_Of_Day_Custom';
+		  $map['filterbar_time_of_day_custom'] = 'Time_Of_Day_Custom';
 
 		  return $map;
 		}
@@ -242,7 +242,7 @@ if (
 		 */
 		function tec_kb_filter_context_locations( array $locations ) {
 		  // Read the filter selected values, if any, from the URL request vars.
-		  $locations['timeofdaycustom'] = [ 'read' => [ \Tribe__Context::REQUEST_VAR => 'timeofdaycustom' ], ];
+		  $locations['filterbar_time_of_day_custom'] = [ 'read' => [ \Tribe__Context::REQUEST_VAR => 'filterbar_time_of_day_custom' ], ];
 
 		  return $locations;
 		}
@@ -259,7 +259,7 @@ if (
 
 			new \Time_Of_Day_Custom(
 			__( 'Time Custom', 'tribe-events-filter-view' ),
-			'timeofdaycustom'
+			'filterbar_time_of_day_custom'
 			);
 		}
 
