@@ -41,7 +41,7 @@ class Time_Of_Day_Custom extends \Tribe__Events__Filterbar__Filter {
 	}
 	
 	protected function setup_join_clause() {
-		if ( function_exists( 'posts_join' ) ) {
+		if ( method_exists( 'Tribe__Events__Query', 'posts_join' ) ) {
 			add_filter( 'posts_join', array( 'Tribe__Events__Query', 'posts_join' ), 10, 2 );
 		}
 
