@@ -39,9 +39,12 @@ class Time_Of_Day_Custom extends \Tribe__Events__Filterbar__Filter {
 		}
 		return $time_of_day_values;
 	}
-
+	
 	protected function setup_join_clause() {
-		add_filter( 'posts_join', array( 'Tribe__Events__Query', 'posts_join' ), 10, 2 );
+		if ( method_exists( 'Tribe__Events__Query', 'posts_join' ) ) {
+			add_filter( 'posts_join', array( 'Tribe__Events__Query', 'posts_join' ), 10, 2 );
+		}
+
 		global $wpdb;
 		$values = $this->currentValue;
 

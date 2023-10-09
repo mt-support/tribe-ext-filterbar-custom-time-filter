@@ -240,11 +240,16 @@ if (
 		 *
 		 * @return array<string,array> The filtered map of Context locations, with the one required from the filter added to it.
 		 */
-		function tec_kb_filter_context_locations( array $locations ) {
-		  // Read the filter selected values, if any, from the URL request vars.
-		  $locations['filterbar_time_of_day_custom'] = [ 'read' => [ \Tribe__Context::REQUEST_VAR => 'filterbar_time_of_day_custom' ], ];
-
-		  return $locations;
+		 function tec_kb_filter_context_locations( array $locations ) {
+			// Read the filter selected values, if any, from the URL request vars.
+			$locations['filterbar_time_of_day_custom'] = [ 
+				'read' => [ 
+					\Tribe__Context::QUERY_VAR   => [ 'tribe_filterbar_time_of_day_custom' ],
+					\Tribe__Context::REQUEST_VAR => [ 'tribe_filterbar_time_of_day_custom' ]
+				], 
+			];
+			
+			return $locations;
 		}
 
 		/**
