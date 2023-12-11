@@ -1,5 +1,5 @@
 === Filter Bar Extension: Custom Time-of-Day Filter ===
-Contributors: ModernTribe
+Contributors: theeventscalendar
 Donate link: https://evnt.is/29
 Tags: events, calendar, filter bar
 Requires at least: 6.2
