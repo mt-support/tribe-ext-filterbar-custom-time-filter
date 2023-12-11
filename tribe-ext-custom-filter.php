@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:       Filter Bar Extension: Custom Filter
- * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
+ * Plugin Name:       Filter Bar Extension: Custom Time-of-Day Filter
+ * Plugin URI:        https://theeventscalendar.com/extensions/creating-a-custom-filter-for-filter-bar/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-custom-filter
- * Description:       Create a custom filter for Filter Bar that narrows displayed events by time of day.
- * Version:           1.0.0
+ * Description:       Create a custom filter for Filter Bar that narrows down displayed events by time of day.
+ * Version:           1.0.1
  * Extension Class:   Tribe\Extensions\Custom_Filter\Main
- * Author:            Modern Tribe, Inc.
- * Author URI:        http://m.tri.be/1971
+ * Author:            The Events Calendar
+ * Author URI:        https://evnt.is/1971
  * License:           GPL version 3 or any later version
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       tribe-ext-custom-filter
@@ -166,7 +166,7 @@ if (
 		 * @return bool
 		 */
 		private function php_version_check() {
-			$php_required_version = '5.6';
+			$php_required_version = '7.4';
 
 			if ( version_compare( PHP_VERSION, $php_required_version, '<' ) ) {
 				if (
